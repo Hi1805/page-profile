@@ -2,7 +2,8 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { createBrowserHistory } from "history";
-import { Router } from "react-router";
+import { Route, Router, Switch } from "react-router";
+import { HomeScreen } from "./pages";
 
 const history = createBrowserHistory();
 
@@ -21,10 +22,21 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, [isMobile]);
+  console.log(isMobile);
 
   return (
     <div className="App">
-      <Router history={history}></Router>
+      <Router history={history}>
+        {!isMobile ? (
+          <React.Fragment>
+            <Switch>
+              <Route exact path="/" component={HomeScreen} />
+            </Switch>
+          </React.Fragment>
+        ) : (
+          <React.Fragment></React.Fragment>
+        )}
+      </Router>
     </div>
   );
 }

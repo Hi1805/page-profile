@@ -1,0 +1,24 @@
+.header {
+    width: 100%;
+
+    .navbar-brand {
+        padding-left: 50px;
+    }
+
+    .navbar-nav {
+        width: 95%;
+        justify-content: flex-end;
+
+        li {
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 29px;
+        }
+
+        .active {
+            a {
+                color: var(--primary) !important;
+            }
+        }
+    }
+}

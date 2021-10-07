@@ -1,0 +1,20 @@
+.certificate {
+    background: #EDF7FA;
+    padding: 20px 0;
+
+    &__title {
+        font-size: 22px;
+        line-height: 60px;
+        padding: 10px 0px;
+
+        &:hover {
+            color: var(--primary);
+            cursor: pointer;
+        }
+    }
+
+
+    .item-certificate__items__item {
+        padding: 10px 15px;
+    }
+}

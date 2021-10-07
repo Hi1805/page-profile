@@ -1,0 +1,56 @@
+.user-info {
+    padding: 71px 0px;
+
+    &__detail {
+        color: var(--dark);
+
+        &__title {
+            font-weight: bold;
+            font-size: 44px;
+            line-height: 60px;
+        }
+
+        &__body {
+            width: 85%;
+            font-size: 16px;
+            padding: 20px 0;
+        }
+
+        &__btn {
+            padding: 38px 0;
+
+            button {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 29px;
+                color: #FFFFFF;
+                outline: none;
+                border: none;
+                background-color: var(--primary);
+                padding: 9px 21px;
+                border-radius: 10px;
+            }
+
+            :hover {
+                font-weight: 600;
+            }
+        }
+
+        &__btn button :hover {
+            display: none;
+        }
+    }
+
+    &__avt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 243px;
+            width: 243px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+}

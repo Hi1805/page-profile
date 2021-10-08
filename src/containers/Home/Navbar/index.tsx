@@ -2,7 +2,7 @@ import { useActiveNav } from "hooks";
 import React, { useRef } from "react";
 import "./navbar.scss";
 import logo from "./img/logo.png";
-type nav = "home" | "about" | "certificates" | "contact" | "featured";
+type nav = "home" | "about" | "certificates" | "contact" | "featured" | "";
 
 const listNav: Array<{
   name: nav;

@@ -8,7 +8,8 @@ export const UserInfo = () => {
           Hi, I am Huy, Web Developer
         </div>
         <div className="user-info__detail__body">
-          I am student of Duy Tan Univeristy,
+          I'm a student at Duy Tan Unversity University, I have a hobby of
+          backpacking and charity trips with friends,
         </div>
         <div className="user-info__detail__btn">
           <button type="button">Download Resume</button>

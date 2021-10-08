@@ -1,20 +1,18 @@
 import React from "react";
 import "./itemCertificate.scss";
-export const ItemCertificate = () => {
+interface ItemCertificateProps {
+  title: string;
+  time: string;
+  img: string;
+}
+export const ItemCertificate = (props: ItemCertificateProps) => {
+  const { title, time, img } = props;
   return (
-    <div
-      className="item-certificate"
-      title=" Making a design system from scratch"
-    >
-      <div className="item-certificate__title">
-        Making a design system from scratch
-      </div>
-      <div className="item-certificate__time">12 Feb 2020</div>
+    <div className="item-certificate" title={title}>
+      <div className="item-certificate__title">{title}</div>
+      <div className="item-certificate__time">{time}</div>
       <div className="item-certificate__img">
-        <img
-          src="https://duhocxanh.net/wp-content/uploads/2019/03/certinficate-la-gi.jpg"
-          alt="img"
-        ></img>
+        <img src={img} alt="img"></img>
       </div>
     </div>
   );

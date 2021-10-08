@@ -2,8 +2,9 @@ import React from "react";
 import logo from "./logo.svg";
 import { createBrowserHistory } from "history";
 import { Route, Router, Switch } from "react-router";
-import { HomeScreen } from "./pages";
 const history = createBrowserHistory();
+const HomeScreen = React.lazy(() => import("pages/Homescreen"));
+
 function App() {
   const [isMobile, setIsMobile] = React.useState(false);
   React.useEffect(() => {
@@ -19,20 +20,21 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, [isMobile]);
-
   return (
     <div className="App">
-      <Router history={history}>
-        {!isMobile ? (
-          <React.Fragment>
-            <Switch>
-              <Route exact path="/" component={HomeScreen} />
-            </Switch>
-          </React.Fragment>
-        ) : (
-          <React.Fragment></React.Fragment>
-        )}
-      </Router>
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <Router history={history}>
+          {!isMobile ? (
+            <React.Fragment>
+              <Switch>
+                <Route exact path="/" component={HomeScreen} />
+              </Switch>
+            </React.Fragment>
+          ) : (
+            <React.Fragment></React.Fragment>
+          )}
+        </Router>
+      </React.Suspense>
     </div>
   );
 }

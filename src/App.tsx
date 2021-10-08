@@ -19,7 +19,6 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, [isMobile]);
-  console.log(isMobile);
 
   return (
     <div className="App">

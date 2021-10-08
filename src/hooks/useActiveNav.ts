@@ -5,8 +5,6 @@ export const useActiveNav = (
   handler: (event: MouseEvent) => void
 ) => {
   useEffect(() => {
-    console.log("run");
-
     const listener = (event: any) => {
       if (!ref.current || ref.current.contains(event.target as Node)) {
         return;

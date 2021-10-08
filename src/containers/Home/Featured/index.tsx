@@ -4,9 +4,9 @@ import "./featured.scss";
 export const FeaturedWorks = () => {
   return (
     <div className="featured-works" id="featured">
-      <div className="container">
+      <div className="container" style={{ padding: 0 }}>
         <div className="featured-works__title">Featured Works</div>
-        <div className="featured-works__items">
+        <div className="featured-works__items" style={{ padding: "10px" }}>
           <ItemFeatured
             id={"1"}
             title="Smart Attendance"

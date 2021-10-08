@@ -48,6 +48,7 @@ export const Navbar = () => {
   });
   return (
     <div className="header">
+      <h5>WEBSITE IS BUILDING</h5>
       <nav className="navbar d-flex navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">
           <img src={logo} alt="logo"></img>

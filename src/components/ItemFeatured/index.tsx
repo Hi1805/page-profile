@@ -17,7 +17,7 @@ export const ItemFeatured = (props: ItemFeaturedProps) => {
         <img
           src="https://image.freepik.com/free-vector/dashboard-user-panel-template_23-2148279574.jpg"
           alt="img"
-        ></img>
+        />
       </div>
       <div className="item-featured__content col-md-9 col-xl-8">
         <div className="item-featured__content__title">{title}</div>

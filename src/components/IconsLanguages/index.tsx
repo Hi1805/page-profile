@@ -23,7 +23,8 @@ export type typeLanguages =
   | "nestjs"
   | "github"
   | "linkedin"
-  | "facebook";
+  | "facebook"
+  | "tensorflow";
 interface IconLanguagesProps {
   language: typeLanguages;
   className?: string;

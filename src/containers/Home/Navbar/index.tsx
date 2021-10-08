@@ -1,7 +1,9 @@
-import React from "react";
-import { useHistory } from "react-router";
+import { useActiveNav } from "hooks";
+import React, { useRef } from "react";
 import "./navbar.scss";
+import logo from "./img/logo.png";
 type nav = "home" | "about" | "certificates" | "contact" | "featured";
+
 const listNav: Array<{
   name: nav;
   display: string;
@@ -35,17 +37,20 @@ const listNav: Array<{
   },
 ];
 export const Navbar = () => {
-  const history = useHistory();
   const [itemActiveState, setItemActiveState] = React.useState<nav>("home");
   const handleLink = (link: string) => {
     const href = `#${link}`;
     window.location.replace(href);
   };
+  const refItem = useRef() as React.MutableRefObject<HTMLInputElement>;
+  useActiveNav(refItem, (e: any) => {
+    console.log(e);
+  });
   return (
     <div className="header">
       <nav className="navbar d-flex navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">
-          PROFILE
+          <img src={logo} alt="logo"></img>
         </a>
         <div className="nav">
           <ul className="navbar">

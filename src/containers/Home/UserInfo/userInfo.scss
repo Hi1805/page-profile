@@ -29,16 +29,16 @@
                 background-color: var(--primary);
                 padding: 9px 21px;
                 border-radius: 10px;
+
+
             }
 
-            :hover {
-                font-weight: 600;
+            &:hover {
+                font-weight: 700;
             }
+
         }
 
-        &__btn button :hover {
-            display: none;
-        }
     }
 
     &__avt {

@@ -1,14 +1,11 @@
 import React from "react";
 import logo from "./logo.svg";
-import "./App.css";
 import { createBrowserHistory } from "history";
 import { Route, Router, Switch } from "react-router";
 import { HomeScreen } from "./pages";
-
 const history = createBrowserHistory();
-
 function App() {
-  const [isMobile, setIsMobile] = React.useState(true);
+  const [isMobile, setIsMobile] = React.useState(false);
   React.useEffect(() => {
     const handleResize = () => {
       const isMobileCurrent = window.innerWidth <= 768;

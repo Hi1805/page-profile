@@ -1,0 +1,12 @@
+.featured-works {
+    &__title {
+        font-size: 22px;
+        line-height: 60px;
+        padding: 10px 0px;
+
+        &:hover {
+            color: var(--primary);
+            cursor: pointer;
+        }
+    }
+}

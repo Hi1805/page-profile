@@ -1,0 +1,40 @@
+.footer {
+    padding: 50px;
+    text-align: center;
+
+    .input-group {
+        justify-content: center;
+        padding: 20px;
+        width: 50% !important;
+        margin: auto;
+
+        label {
+            padding-right: 50px;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .socials {
+        padding-top: 50px;
+
+        .socials-item {
+            padding: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+                color: var(--primary);
+            }
+        }
+    }
+
+    .copyright {
+        padding-top: 2rem;
+    }
+}

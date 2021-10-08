@@ -1,5 +1,6 @@
+import { FeaturedWorks } from "containers/Home/Featured";
 import React from "react";
-import { Certificate, Navbar, UserInfo } from "../../containers";
+import { Certificate, Footer, Navbar, UserInfo } from "containers";
 
 export const HomeScreen = () => {
   return (
@@ -7,6 +8,8 @@ export const HomeScreen = () => {
       <Navbar />
       <UserInfo />
       <Certificate />
+      <FeaturedWorks />
+      <Footer />
     </div>
   );
 };

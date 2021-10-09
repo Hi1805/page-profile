@@ -3,7 +3,7 @@ import { ItemCertificate } from "../../../components";
 import "./certicate.scss";
 export const Certificate = () => {
   return (
-    <div className="certificate" id="certificates">
+    <section className="certificate" id="certificates">
       <div className="container" style={{ padding: 0 }}>
         <div className="certificate__header d-flex justify-content-between">
           <div className="certificate__title">Certificates</div>
@@ -45,6 +45,6 @@ export const Certificate = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

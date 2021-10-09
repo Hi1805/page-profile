@@ -15,8 +15,9 @@
 
         &__title {
             color: var(--dark);
-            font-size: 30px;
+            font-size: 2rem;
             font-weight: 700;
+            padding: 0.5rem;
         }
 
         &__material {
@@ -30,21 +31,23 @@
                 font-weight: 900;
                 color: #fff;
                 text-align: center;
-                padding: 5px 15px;
-                height: 40px;
                 cursor: pointer;
+                display: flex;
+                height: 40px;
 
-                &:hover {}
+                p {
+                    margin: auto;
+                }
             }
 
             &__languages {
                 padding-left: 50px;
 
                 i {
-                    background-color: #EDF7FA;
                     margin: 0 5px;
+                    box-sizing: border-box;
                     font-size: 2.5rem;
-                    padding: 10px;
+                    padding: 0.5rem;
                     border-radius: 5px;
                     cursor: pointer;
                 }

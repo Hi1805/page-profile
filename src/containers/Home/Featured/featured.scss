@@ -1,8 +1,9 @@
 .featured-works {
+    padding-top: calc(var(--distance_nav) + 35px);
+
     &__title {
         font-size: 22px;
         line-height: 60px;
-        padding: 10px 0px;
 
         &:hover {
             color: var(--primary);

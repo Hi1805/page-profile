@@ -3,7 +3,7 @@ import React from "react";
 import "./featured.scss";
 export const FeaturedWorks = () => {
   return (
-    <div className="featured-works" id="featured">
+    <section className="featured-works" id="featured">
       <div className="container" style={{ padding: 0 }}>
         <div className="featured-works__title">Featured Works</div>
         <div className="featured-works__items" style={{ padding: "10px" }}>
@@ -22,7 +22,6 @@ export const FeaturedWorks = () => {
               "googlecloud",
               "nodejs",
               "bootstrap",
-              "tensorflow",
             ]}
           />
           <ItemFeatured
@@ -54,6 +53,6 @@ export const FeaturedWorks = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

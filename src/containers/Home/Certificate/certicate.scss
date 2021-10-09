@@ -1,11 +1,10 @@
 .certificate {
-    background: #EDF7FA;
-    padding: 20px 0;
+    background: var(--bg-main-color);
+    padding: calc(var(--distance_nav) + 35px) 0;
 
     &__title {
         font-size: 22px;
         line-height: 60px;
-        padding: 10px 0px;
 
         &:hover {
             color: var(--primary);

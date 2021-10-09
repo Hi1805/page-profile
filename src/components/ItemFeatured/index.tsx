@@ -12,20 +12,26 @@ interface ItemFeaturedProps {
 export const ItemFeatured = (props: ItemFeaturedProps) => {
   const { id, title, languages, details, time } = props;
   return (
-    <div className="item-featured d-flex">
-      <div className="item-featured__logo col-md-3 col-xl-4">
+    <div className="item-featured d-flex flex-wrap">
+      <div className="item-featured__logo col-sm-12 col-md-5 col-xl-4">
         <img
           src="https://image.freepik.com/free-vector/dashboard-user-panel-template_23-2148279574.jpg"
           alt="img"
         />
       </div>
-      <div className="item-featured__content col-md-9 col-xl-8">
+      <div className="item-featured__content col-sm-12 col-md-7 col-xl-8">
         <div className="item-featured__content__title">{title}</div>
-        <div className="item-featured__content__material">
-          <div className="item-featured__content__material__time">{time} </div>
-          <div className="item-featured__content__material__languages">
-            {languages.map((language) => (
-              <IconLanguages language={language} className="language__icon" />
+        <div className="item-featured__content__material d-flex flex-wrap">
+          <div className="item-featured__content__material__time col-sm-3 col-md-2 col-xl-1">
+            <p> {time}</p>
+          </div>
+          <div className="item-featured__content__material__languages col-sm-9 d-flex col-md-10 flex-wrap col-xl-11">
+            {languages.map((language, index) => (
+              <IconLanguages
+                key={index}
+                language={language}
+                className="language__icon"
+              />
             ))}
           </div>
         </div>

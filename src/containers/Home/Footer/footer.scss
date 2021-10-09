@@ -1,11 +1,14 @@
 .footer {
-    padding: 50px;
     text-align: center;
+    padding-top: calc(var(--distance_nav) + 35px);
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    background-color: var(--bg-main-color);
 
+    height: calc(100vh - var(--distance_nav));
     .input-group {
         align-items: center;
         padding: 20px;
-        width: 50% !important;
         margin: auto;
 
         label {

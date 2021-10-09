@@ -1,51 +1,66 @@
 import { useActiveNav } from "hooks";
-import React, { useRef } from "react";
+
+import React from "react";
 import "./navbar.scss";
 import logo from "./img/logo.png";
-type nav = "home" | "about" | "certificates" | "contact" | "featured" | "";
+type navbar = "home" | "about" | "certificates" | "contact" | "featured" | "";
 
 const listNav: Array<{
-  name: nav;
+  name: navbar;
   display: string;
   link: string;
 }> = [
   {
     name: "home",
     display: "Home",
-    link: "",
+    link: "#top",
   },
-  {
-    name: "about",
-    display: "About Us",
-    link: "aboutus",
-  },
-
   {
     name: "certificates",
     display: "Certificates",
-    link: "certificates",
+    link: "#certificates",
   },
   {
     name: "featured",
     display: "Featured Works",
-    link: "featured",
+    link: "#featured",
   },
+
   {
     name: "contact",
     display: "Contact",
-    link: "contact",
+    link: "#contact",
   },
 ];
+
 export const Navbar = () => {
-  const [itemActiveState, setItemActiveState] = React.useState<nav>("home");
+  const [itemActiveState, setItemActiveState] = React.useState<navbar>("home");
+
   const handleLink = (link: string) => {
-    const href = `#${link}`;
+    const href = `${link}`;
     window.location.replace(href);
   };
-  const refItem = useRef() as React.MutableRefObject<HTMLInputElement>;
-  useActiveNav(refItem, (e: any) => {
-    console.log(e);
-  });
+
+  React.useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const navLi = document.querySelectorAll(".nav-item");
+    window.onscroll = () => {
+      var current: navbar = "home";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 100) {
+          current = section.getAttribute("id") as navbar;
+        }
+      });
+
+      navLi.forEach((li) => {
+        if (li.classList.contains(current)) {
+          setItemActiveState(current);
+        }
+      });
+    };
+  }, []);
+
   return (
     <div className="header">
       <h5>WEBSITE IS BUILDING</h5>
@@ -58,7 +73,7 @@ export const Navbar = () => {
             {listNav.map((nav, index) => (
               <li
                 key={index}
-                className={`nav-item ${
+                className={`nav-item ${nav.name} ${
                   nav.name === itemActiveState ? "active" : ""
                 }`}
                 onClick={() => {
@@ -67,6 +82,7 @@ export const Navbar = () => {
               >
                 <a
                   className="nav-link"
+                  href={nav.link}
                   onClick={() => {
                     handleLink(nav.link);
                   }}

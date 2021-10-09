@@ -14,21 +14,23 @@ export const Footer = () => {
   const onSubmit = () => {};
 
   return (
-    <div className="footer" id="contact">
-      <div className="footer__title">Contact with me</div>{" "}
+    <section className="footer" id="contact">
+      <div className="footer__title">Contact with me : </div>
       <div className="container">
         <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
-          <div className="input-group">
-            <label htmlFor="content-email">Your Email : </label>{" "}
-            <input
-              id="content-email"
-              type="text"
-              className="form-control"
-              placeholder="example@example.com"
-            />
-            <button type="submit" className="btn btn-primary">
-              Send
-            </button>
+          <div className="col-xl-6 col-md-8 m-auto">
+            <div className="input-group">
+              <label htmlFor="content-email">Your Email : </label>{" "}
+              <input
+                id="content-email"
+                type="email"
+                className="form-control"
+                placeholder="example@example.com"
+              />
+              <button type="submit" className="btn btn-primary">
+                Send
+              </button>
+            </div>
           </div>
         </form>
 
@@ -46,7 +48,7 @@ export const Footer = () => {
           <br />
           <a href="https://github.com/john1805/page-profile">Source Code</a>
         </div>
-      </div>{" "}
-    </div>
+      </div>
+    </section>
   );
 };

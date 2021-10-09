@@ -1,6 +1,7 @@
 .header {
     position: relative;
     width: 100%;
+    height: var(--distance_nav);
 
     .navbar {
         justify-content: space-between;
@@ -29,14 +30,15 @@
         padding-left: 50px;
 
         img {
-            height: 100px;
+            height: var(--distance_nav);
             width: 100%;
             border-radius: 50%;
         }
     }
 
     nav {
-        // position: fixed;        width: 100%;
+        position: fixed;
+        width: 100%;
         z-index: 9999;
         overflow: hidden;
         transition: 0.4s;

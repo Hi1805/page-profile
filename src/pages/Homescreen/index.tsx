@@ -6,9 +6,11 @@ const HomeScreen = () => {
   return (
     <div className="home-screen">
       <Navbar />
-      <UserInfo />
-      <Certificate />
-      <FeaturedWorks />
+      <main>
+        <UserInfo />
+        <Certificate />
+        <FeaturedWorks />
+      </main>
       <Footer />
     </div>
   );

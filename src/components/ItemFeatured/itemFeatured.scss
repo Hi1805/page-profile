@@ -22,7 +22,6 @@
 
         &__material {
             display: flex;
-            padding: 10px 0;
 
             &__time {
                 background: #142850;
@@ -40,9 +39,7 @@
                 }
             }
 
-            &__languages {
-                padding-left: 50px;
-
+            .languages {
                 i {
                     margin: 0 5px;
                     box-sizing: border-box;
@@ -52,6 +49,16 @@
                     cursor: pointer;
                 }
             }
+
+            &__languages--desktop {
+                padding-left: 3rem;
+            }
+
+            &__languages--mobile {
+                padding-top: 2rem;
+                margin: auto;
+            }
+
         }
 
         &__detail {

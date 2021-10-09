@@ -4,7 +4,7 @@ import "./certicate.scss";
 export const Certificate = () => {
   return (
     <section className="certificate" id="certificates">
-      <div className="container" style={{ padding: 0 }}>
+      <div className="container">
         <div className="certificate__header d-flex justify-content-between">
           <div className="certificate__title">Certificates</div>
           <div className="certificate__title">Views All</div>

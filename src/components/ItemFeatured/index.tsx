@@ -1,6 +1,7 @@
 import { IconLanguages, typeLanguages } from "components/IconsLanguages";
 import React from "react";
 import "./itemFeatured.scss";
+import { useIsMobile } from "hooks";
 
 interface ItemFeaturedProps {
   id: string;
@@ -11,6 +12,10 @@ interface ItemFeaturedProps {
 }
 export const ItemFeatured = (props: ItemFeaturedProps) => {
   const { id, title, languages, details, time } = props;
+  const isMobile = useIsMobile();
+  const languageClassName = !isMobile
+    ? " languages item-featured__content__material__languages--desktop"
+    : "languages item-featured__content__material__languages--mobile";
   return (
     <div className="item-featured d-flex flex-wrap">
       <div className="item-featured__logo col-sm-12 col-md-5 col-xl-4">
@@ -22,10 +27,12 @@ export const ItemFeatured = (props: ItemFeaturedProps) => {
       <div className="item-featured__content col-sm-12 col-md-7 col-xl-8">
         <div className="item-featured__content__title">{title}</div>
         <div className="item-featured__content__material d-flex flex-wrap">
-          <div className="item-featured__content__material__time col-sm-3 col-md-2 col-xl-1">
+          <div className="item-featured__content__material__time col-12 col-md-2 col-xl-1">
             <p> {time}</p>
           </div>
-          <div className="item-featured__content__material__languages col-sm-9 d-flex col-md-10 flex-wrap col-xl-11">
+          <div
+            className={`${languageClassName} col-12 col-sm-9 d-flex col-md-10 flex-wrap col-xl-11`}
+          >
             {languages.map((language, index) => (
               <IconLanguages
                 key={index}

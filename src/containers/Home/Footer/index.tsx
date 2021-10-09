@@ -19,17 +19,23 @@ export const Footer = () => {
       <div className="container">
         <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
           <div className="col-xl-6 col-md-8 m-auto">
-            <div className="input-group">
-              <label htmlFor="content-email">Your Email : </label>{" "}
-              <input
-                id="content-email"
-                type="email"
-                className="form-control"
-                placeholder="example@example.com"
-              />
-              <button type="submit" className="btn btn-primary">
-                Send
-              </button>
+            <div className="input-group flex-wrap d-flex">
+              <label htmlFor="content-email" className="col-12 col-md-3">
+                Your Email :
+              </label>
+              <div className="col-12 d-flex col-md-9">
+                <div className="col-md-9">
+                  <input
+                    id="content-email"
+                    type="email"
+                    className="form-control"
+                    placeholder="example@example.com"
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary">
+                  Send
+                </button>
+              </div>
             </div>
           </div>
         </form>
@@ -43,11 +49,11 @@ export const Footer = () => {
           <IconLanguages language={"github"} className="socials-item" />
           <IconLanguages language={"linkedin"} className="socials-item" />
         </div>
-        <div className="copyright">
-          Copyright ©2021 All rights reserved by John
-          <br />
-          <a href="https://github.com/john1805/page-profile">Source Code</a>
-        </div>
+      </div>
+      <div className="copyright">
+        Copyright ©2021 All rights reserved by John
+        <br />
+        <a href="https://github.com/john1805/page-profile">Source Code</a>
       </div>
     </section>
   );

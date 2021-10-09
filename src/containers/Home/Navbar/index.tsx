@@ -1,11 +1,17 @@
-import { useActiveNav } from "hooks";
-
+import { useActiveNav, useIsMobile } from "hooks";
 import React from "react";
 import "./navbar.scss";
-import logo from "./img/logo.png";
-type navbar = "home" | "about" | "certificates" | "contact" | "featured" | "";
+import logo from "containers/Home/img/logo.png";
+import { NavbarMobile } from "containers";
+export type navbar =
+  | "home"
+  | "about"
+  | "certificates"
+  | "contact"
+  | "featured"
+  | "";
 
-const listNav: Array<{
+export const listNav: Array<{
   name: navbar;
   display: string;
   link: string;
@@ -35,11 +41,12 @@ const listNav: Array<{
 
 export const Navbar = () => {
   const [itemActiveState, setItemActiveState] = React.useState<navbar>("home");
-
+  const isMobile = useIsMobile();
   const handleLink = (link: string) => {
     const href = `${link}`;
     window.location.replace(href);
   };
+  console.log(itemActiveState);
 
   React.useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -55,18 +62,18 @@ export const Navbar = () => {
 
       navLi.forEach((li) => {
         if (li.classList.contains(current)) {
+          console.log("true");
+
           setItemActiveState(current);
         }
       });
     };
   }, []);
-
-  return (
+  const NavDesktop = (
     <div className="header">
-      <h5>WEBSITE IS BUILDING</h5>
       <nav className="navbar d-flex navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">
-          <img src={logo} alt="logo"></img>
+          <img src={logo} alt="logo" />
         </a>
         <div className="nav">
           <ul className="navbar">
@@ -96,4 +103,5 @@ export const Navbar = () => {
       </nav>
     </div>
   );
+  return isMobile ? <NavbarMobile /> : NavDesktop;
 };

@@ -24,7 +24,9 @@ export type typeLanguages =
   | "github"
   | "linkedin"
   | "facebook"
-  | "tensorflow";
+  | "tensorflow"
+  | "sequelize"
+  | "docker";
 interface IconLanguagesProps {
   language: typeLanguages;
   className?: string;

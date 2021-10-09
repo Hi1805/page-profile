@@ -1,5 +1,9 @@
 .featured-works {
-    padding-top: calc(var(--distance_nav) + 35px);
+    padding-top: 0;
+
+    @media screen and (min-width: 768px) {
+        padding-top: calc(var(--distance_nav) + 35px);
+    }
 
     &__title {
         font-size: 22px;

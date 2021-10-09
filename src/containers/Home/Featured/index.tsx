@@ -1,4 +1,5 @@
 import { ItemFeatured } from "components";
+import { useIsMobile } from "hooks";
 import React from "react";
 import "./featured.scss";
 export const FeaturedWorks = () => {
@@ -59,6 +60,7 @@ export const FeaturedWorks = () => {
             ]}
           />
         </div>
+        <div></div>
       </div>
     </section>
   );

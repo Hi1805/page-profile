@@ -1,6 +1,8 @@
 import { useIsMobile } from "hooks";
 import React from "react";
 import "./userInfo.scss";
+import { BsFileArrowDown } from "react-icons/bs";
+import avt from "./img/avt.png";
 export const UserInfo = () => {
   const isMobile = useIsMobile();
 
@@ -24,7 +26,9 @@ export const UserInfo = () => {
               backpacking and charity trips with friends,
             </div>
             <div className="user-info__detail__btn">
-              <button type="button">Download Resume</button>
+              <button type="button">
+                Download Resume <BsFileArrowDown />
+              </button>
             </div>
           </div>
         </div>
@@ -41,7 +45,11 @@ export const UserInfo = () => {
             backpacking and charity trips with friends,
           </div>
           <div className="user-info__detail__btn">
-            <button type="button">Download Resume</button>
+            <a href={avt} download rel="noopener noreferrer">
+              <button type="button">
+                Download Resume <BsFileArrowDown />
+              </button>
+            </a>
           </div>
         </div>
 

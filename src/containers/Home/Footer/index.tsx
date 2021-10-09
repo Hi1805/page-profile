@@ -3,6 +3,7 @@ import "./footer.scss";
 
 import { useForm } from "react-hook-form";
 import { IconLanguages } from "components/IconsLanguages";
+import { useIsMobile } from "hooks";
 
 export const Footer = () => {
   const {
@@ -14,7 +15,7 @@ export const Footer = () => {
   const onSubmit = () => {};
 
   return (
-    <section className="footer" id="contact">
+    <section className="footer" id="footer">
       <div className="footer__title">Contact with me : </div>
       <div className="container">
         <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
@@ -23,7 +24,7 @@ export const Footer = () => {
               <label htmlFor="content-email" className="col-12 col-md-3">
                 Your Email :
               </label>
-              <div className="col-12 d-flex col-md-9">
+              <div className="col-12 d-flex col-md-9 justify-content-center">
                 <div className="col-md-9">
                   <input
                     id="content-email"

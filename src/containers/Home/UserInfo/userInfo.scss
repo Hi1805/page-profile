@@ -1,6 +1,10 @@
 .user-info {
-    padding-top: 100px;
+    padding-top: 3rem;
     padding-bottom: 100px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: calc(var(--distance_nav) + 35px);
+    }
 
     &__detail {
         color: var(--dark);

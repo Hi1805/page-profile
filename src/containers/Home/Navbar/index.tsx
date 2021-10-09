@@ -46,7 +46,6 @@ export const Navbar = () => {
     const href = `${link}`;
     window.location.replace(href);
   };
-  console.log(itemActiveState);
 
   React.useEffect(() => {
     const sections = document.querySelectorAll("section");

@@ -1,12 +1,14 @@
 .header-mobile {
 
     nav {
+
         background-color: var(--dark);
         width: 100%;
         position: fixed;
         bottom: 0;
         z-index: 9999;
         color: #fff;
+        border-top: 4px solid var(--primary);
 
         img {
             width: 50px;
@@ -19,6 +21,64 @@
             list-style: none;
             position: relative;
             margin: 0;
+            padding: 0;
+
+
+            li {
+                display: flex;
+                width: 20%;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                cursor: pointer;
+
+                svg {
+                    margin: auto;
+                    font-size: 2rem;
+                    width: 100%;
+                }
+
+                span {
+                    width: 100%;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                }
+
+                a {
+                    margin: auto;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+
+            .active {
+                color: var(--primary) !important;
+            }
+
+            .nav-item__middle {
+                position: relative;
+                height: unset;
+                bottom: 15px;
+
+                a {
+                    z-index: 999;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -0.75rem;
+                    height: 6em;
+                    background-color: var(--dark);
+                    width: 3.8em;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    border-top: 4px solid var(--primary);
+                    border-radius: 999px;
+                }
+            }
         }
     }
 }

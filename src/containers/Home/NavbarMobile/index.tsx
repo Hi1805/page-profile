@@ -23,7 +23,6 @@ export const NavbarMobile = () => {
                 spy={true}
                 smooth={true}
                 offset={0}
-                duration={500}
               >
                 <BiCertification className="nav-item__icons" />
                 <span> Certificate</span>
@@ -34,8 +33,8 @@ export const NavbarMobile = () => {
                 to="featured"
                 activeClass="active"
                 spy={true}
+                smooth={true}
                 offset={0}
-                duration={500}
               >
                 <MdOutlineFeaturedPlayList className="nav-item__icons col-12" />
                 <span>Features</span>
@@ -43,17 +42,28 @@ export const NavbarMobile = () => {
             </li>
 
             <li className="nav-item nav-item__middle">
-              <Link to="aboutus" spy={true} offset={0} duration={500}>
-                <img src={logo} alt="logo" />
+              <Link
+                to="aboutus"
+                spy={true}
+                offset={0}
+                smooth={true}
+                className="d-flex justify-content-center flex-wrap"
+              >
+                <img
+                  src={logo}
+                  alt="logo"
+                  style={{ marginBottom: "0.25rem" }}
+                />
+                <span className="w-100">Home</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="footer"
+                to="contact"
                 activeClass="active"
                 spy={true}
-                offset={-100}
-                duration={500}
+                smooth={true}
+                offset={0}
               >
                 <MdOutlinePermContactCalendar className="nav-item__icons" />
                 <span>Contact</span>

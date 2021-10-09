@@ -1,8 +1,9 @@
-import { useActiveNav, useIsMobile } from "hooks";
+import { useIsMobile } from "hooks";
 import React from "react";
 import "./navbar.scss";
 import logo from "containers/Home/img/logo.png";
 import { NavbarMobile } from "containers";
+import { Link } from "react-scroll";
 export type navbar =
   | "home"
   | "about"
@@ -19,55 +20,28 @@ export const listNav: Array<{
   {
     name: "home",
     display: "Home",
-    link: "#top",
+    link: "aboutus",
   },
   {
     name: "certificates",
     display: "Certificates",
-    link: "#certificates",
+    link: "certificates",
   },
   {
     name: "featured",
     display: "Featured Works",
-    link: "#featured",
+    link: "featured",
   },
 
   {
     name: "contact",
     display: "Contact",
-    link: "#contact",
+    link: "contact",
   },
 ];
 
 export const Navbar = () => {
-  const [itemActiveState, setItemActiveState] = React.useState<navbar>("home");
   const isMobile = useIsMobile();
-  const handleLink = (link: string) => {
-    const href = `${link}`;
-    window.location.replace(href);
-  };
-
-  React.useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const navLi = document.querySelectorAll(".nav-item");
-    window.onscroll = () => {
-      var current: navbar = "home";
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        if (window.scrollY >= sectionTop - 100) {
-          current = section.getAttribute("id") as navbar;
-        }
-      });
-
-      navLi.forEach((li) => {
-        if (li.classList.contains(current)) {
-          console.log("true");
-
-          setItemActiveState(current);
-        }
-      });
-    };
-  }, []);
   const NavDesktop = (
     <div className="header">
       <nav className="navbar d-flex navbar-expand-lg navbar-light bg-light">
@@ -77,24 +51,18 @@ export const Navbar = () => {
         <div className="nav">
           <ul className="navbar">
             {listNav.map((nav, index) => (
-              <li
-                key={index}
-                className={`nav-item ${nav.name} ${
-                  nav.name === itemActiveState ? "active" : ""
-                }`}
-                onClick={() => {
-                  setItemActiveState(nav.name);
-                }}
-              >
-                <a
+              <li key={index}>
+                <Link
                   className="nav-link"
-                  href={nav.link}
-                  onClick={() => {
-                    handleLink(nav.link);
-                  }}
+                  smooth={true}
+                  offset={-100}
+                  spy={true}
+                  to={nav.link}
+                  duration={500}
+                  activeClass="active"
                 >
                   {nav.display}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

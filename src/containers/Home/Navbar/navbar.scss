@@ -57,7 +57,7 @@
             cursor: pointer;
 
             .nav-link {
-                color: var(--dark) !important;
+                color: var(--dark);
             }
 
             &:hover {
@@ -68,9 +68,7 @@
         }
 
         .active {
-            a {
-                color: var(--primary) !important;
-            }
+            color: var(--primary) !important;
         }
     }
 }

@@ -15,7 +15,7 @@ export const Footer = () => {
   const onSubmit = () => {};
 
   return (
-    <section className="footer" id="footer">
+    <section className="footer" id="contact">
       <div className="footer__title">Contact with me : </div>
       <div className="container">
         <form className="form-group" onSubmit={handleSubmit(onSubmit)}>

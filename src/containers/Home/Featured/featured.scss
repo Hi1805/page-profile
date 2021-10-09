@@ -1,5 +1,5 @@
 .featured-works {
-    padding-top: 0;
+    padding: 2.5rem 0;
 
     @media screen and (min-width: 768px) {
         padding-top: calc(var(--distance_nav) + 35px);

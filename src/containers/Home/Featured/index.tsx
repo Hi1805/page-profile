@@ -1,8 +1,11 @@
-import { ItemFeatured } from "components";
-import { useIsMobile } from "hooks";
 import React from "react";
+import { useHistory } from "react-router";
+import { ItemFeatured } from "components";
+
 import "./featured.scss";
 export const FeaturedWorks = () => {
+  const history = useHistory();
+
   return (
     <section className="featured-works" id="featured">
       <div className="container">
@@ -60,7 +63,17 @@ export const FeaturedWorks = () => {
             ]}
           />
         </div>
-        <div></div>
+        <div className="w-100 d-flex mt-4">
+          <button
+            type="button"
+            className="btn m-auto btn__more"
+            onClick={() => {
+              history.push("/featured");
+            }}
+          >
+            {` More >>`}
+          </button>
+        </div>
       </div>
     </section>
   );

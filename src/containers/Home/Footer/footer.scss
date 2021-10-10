@@ -18,8 +18,24 @@
         padding: 20px;
         margin: auto;
 
-        label {
-            padding-right: 50px;
+        input {
+            border: none;
+            height: 100%;
+            width: 100%;
+            outline: none;
+            padding-left: 1rem;
+        }
+
+        .btn {
+            border-radius: 0;
+            background-color: #f58220;
+            color: #fff;
+
+            &:hover {
+                font-weight: bold;
+                color: #fff;
+                background-color: var(--dark)
+            }
         }
     }
 

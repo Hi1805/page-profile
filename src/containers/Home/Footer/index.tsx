@@ -29,11 +29,10 @@ export const Footer = () => {
                   <input
                     id="content-email"
                     type="email"
-                    className="form-control"
                     placeholder="example@example.com"
                   />
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn">
                   Send
                 </button>
               </div>

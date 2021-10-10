@@ -42,6 +42,7 @@ export const listNav: Array<{
 
 export const Navbar = () => {
   const isMobile = useIsMobile();
+
   const NavDesktop = (
     <div className="header">
       <nav className="navbar d-flex navbar-expand-lg navbar-light bg-light">
@@ -58,7 +59,7 @@ export const Navbar = () => {
                   offset={-100}
                   spy={true}
                   to={nav.link}
-                  duration={500}
+                  duration={100}
                   activeClass="active"
                 >
                   {nav.display}

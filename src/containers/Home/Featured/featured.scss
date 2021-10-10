@@ -14,4 +14,19 @@
             cursor: pointer;
         }
     }
+
+    .btn__more {
+        border-radius: 20px;
+        padding: 0.5rem 1.25rem;
+        font-size: 1.25rem;
+        color: #fff;
+        background-color: #f58220;
+
+        &:hover {
+            background-color: var(--dark);
+            transform: scale(1.05);
+            font-weight: bold;
+            transition: transform 0.25s linear;
+        }
+    }
 }

@@ -2,16 +2,26 @@
     padding: 25px 0;
     border-bottom: 1px solid #E0E0E0;
 
+
+
     &__logo {
         img {
             width: 100%;
             border-radius: 6px;
             height: 100%;
         }
+
+        &:hover {
+            box-shadow: 0px 0px 2px #E0E0E0;
+        }
     }
 
     &__content {
         padding: 0 18px;
+
+        &:hover {
+            background-color: var(--bg-main-color);
+        }
 
         &__title {
             color: var(--dark);
